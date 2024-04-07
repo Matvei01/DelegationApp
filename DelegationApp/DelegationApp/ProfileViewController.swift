@@ -10,6 +10,11 @@ import UIKit
 // MARK: - ProfileViewController
 final class ProfileViewController: UIViewController {
 
+    // MARK: - Public Properties
+    var name = ""
+    var surname = ""
+    var personalInfo = ""
+    
     // MARK: - UI Elements
     private lazy var profileImageView: UIImageView = {
         let origin = CGPoint(x: 0, y: 145)
@@ -27,10 +32,11 @@ final class ProfileViewController: UIViewController {
     
     private lazy var fullNameLabel: UILabel = {
         let origin = CGPoint(x: 0, y: profileImageView.frame.origin.y + 98)
-        let size = CGSize(width: 120, height: 19)
+        let size = CGSize(width: 150, height: 19)
         
         let label = UILabel()
-        label.text = "Имя Фамилия"
+        label.text = "\(name) \(surname)"
+        label.textAlignment = .center
         label.font = .systemFont(ofSize: 16, weight: .bold)
         label.frame = CGRect(origin: origin, size: size)
         label.center.x = view.center.x
@@ -56,6 +62,7 @@ final class ProfileViewController: UIViewController {
         let size = CGSize(width: view.frame.width - 60, height: 158)
         
         let textView = UITextView()
+        textView.text = personalInfo
         textView.font = .systemFont(ofSize: 16)
         textView.contentInset = UIEdgeInsets(top: 22, left: 12, bottom: 22, right: 15)
         textView.backgroundColor = .backgroundView
@@ -96,6 +103,6 @@ private extension ProfileViewController {
     }
     
     func setupNavigationController() {
-        title = "Имя Фамилия"
+        title = "\(name) \(surname)"
     }
 }

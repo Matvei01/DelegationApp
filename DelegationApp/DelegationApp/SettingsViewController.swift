@@ -10,6 +10,9 @@ import UIKit
 // MARK: - SettingsViewController
 final class SettingsViewController: UIViewController {
 
+    // MARK: - Public Properties
+    weak var delegate: SettingsViewControllerDelegate!
+    
     // MARK: - UI Elements
     private lazy var nameLabel: UILabel = {
         let origin = CGPoint(x: 42, y: 155)
@@ -112,7 +115,14 @@ final class SettingsViewController: UIViewController {
     
     // MARK: -  Action
     private lazy var saveButtonAction = UIAction { [ weak self ] _ in
+        guard let self = self else { return }
+        self.delegate.setNewValues(
+            name: self.nameTextField.text ?? "",
+            surname: self.surnameTextField.text ?? "",
+            personalInfo: self.descriptionTextView.text ?? ""
+        )
         
+        self.navigationController?.popViewController(animated: true)
     }
     
     // MARK: - Override Methods

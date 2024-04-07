@@ -7,9 +7,18 @@
 
 import UIKit
 
+protocol SettingsViewControllerDelegate: AnyObject {
+    func setNewValues(name: String, surname: String, personalInfo: String)
+}
+
 // MARK: - MainViewController
 final class MainViewController: UIViewController {
 
+    // MARK: - Public Properties
+    var name = "Имя"
+    var surname = "Фамилия"
+    var personalInfo = ""
+    
     // MARK: - UI Elements
     private lazy var personView: UIView = {
         let origin = CGPoint(x: 30, y: 135)
@@ -42,10 +51,10 @@ final class MainViewController: UIViewController {
     
     private lazy var fullNameLabel: UILabel = {
         let origin = CGPoint(x: personImageView.frame.origin.x + 87, y: 29)
-        let size = CGSize(width: 120, height: 19)
+        let size = CGSize(width: 150, height: 19)
         
         let label = UILabel()
-        label.text = "Имя Фамилия"
+        label.text = "\(name) \(surname)"
         label.font = .systemFont(ofSize: 16, weight: .bold)
         label.frame = CGRect(origin: origin, size: size)
         
@@ -81,13 +90,21 @@ final class MainViewController: UIViewController {
     
     // MARK: -  Action
     private lazy var editButtonAction = UIAction { [ weak self ] _ in
+        guard let self = self else { return }
         let settingsVC = SettingsViewController()
-        self?.navigationController?.pushViewController(settingsVC, animated: true)
+        settingsVC.delegate = self
+        
+        self.navigationController?.pushViewController(settingsVC, animated: true)
     }
     
     private lazy var transitionButtonAction = UIAction { [ weak self ] _ in
+        guard let self = self else { return }
         let profileVC = ProfileViewController()
-        self?.navigationController?.pushViewController(profileVC, animated: true)
+        profileVC.name = self.name
+        profileVC.surname = self.surname
+        profileVC.personalInfo = self.personalInfo
+        
+        self.navigationController?.pushViewController(profileVC, animated: true)
     }
     
     // MARK: - Override Methods
@@ -106,17 +123,30 @@ private extension MainViewController {
     }
     
     func addSubviews() {
-        setupSubviews(personView)
-    }
-    
-    func setupSubviews(_ subviews: UIView... ) {
-        for subview in subviews {
-            view.addSubview(subview)
-        }
+        view.addSubview(personView)
     }
     
     func setupNavigationController() {
         title = "Главная"
+    }
+    
+    private func updateFullNameLabel(name: String, surname: String) {
+        fullNameLabel.text = "\(name) \(surname)"
+    }
+    
+    private func updatePersonalInfo(_ info: String) {
+        self.personalInfo = info
+    }
+}
+
+extension MainViewController: SettingsViewControllerDelegate {
+    func setNewValues(name: String, surname: String, personalInfo: String) {
+        self.name = name
+        self.surname = surname
+        self.personalInfo = personalInfo
+        
+        updatePersonalInfo(personalInfo)
+        updateFullNameLabel(name: name, surname: surname)
     }
 }
 
