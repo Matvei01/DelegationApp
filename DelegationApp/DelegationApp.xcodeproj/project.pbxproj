@@ -12,7 +12,7 @@
 		1AB20D832BC2A4CE00EC0006 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB20D822BC2A4CE00EC0006 /* MainViewController.swift */; };
 		1AB20D882BC2A4CF00EC0006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AB20D872BC2A4CF00EC0006 /* Assets.xcassets */; };
 		1AB20D8B2BC2A4CF00EC0006 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB20D892BC2A4CF00EC0006 /* LaunchScreen.storyboard */; };
-		1AB20D932BC2A61B00EC0006 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB20D922BC2A61B00EC0006 /* EditViewController.swift */; };
+		1AB20D932BC2A61B00EC0006 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB20D922BC2A61B00EC0006 /* SettingsViewController.swift */; };
 		1AB20D952BC2A66D00EC0006 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB20D942BC2A66D00EC0006 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +24,7 @@
 		1AB20D872BC2A4CF00EC0006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AB20D8A2BC2A4CF00EC0006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1AB20D8C2BC2A4CF00EC0006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1AB20D922BC2A61B00EC0006 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		1AB20D922BC2A61B00EC0006 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1AB20D942BC2A66D00EC0006 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,7 +61,7 @@
 				1AB20D7E2BC2A4CE00EC0006 /* AppDelegate.swift */,
 				1AB20D802BC2A4CE00EC0006 /* SceneDelegate.swift */,
 				1AB20D822BC2A4CE00EC0006 /* MainViewController.swift */,
-				1AB20D922BC2A61B00EC0006 /* EditViewController.swift */,
+				1AB20D922BC2A61B00EC0006 /* SettingsViewController.swift */,
 				1AB20D942BC2A66D00EC0006 /* ProfileViewController.swift */,
 				1AB20D872BC2A4CF00EC0006 /* Assets.xcassets */,
 				1AB20D892BC2A4CF00EC0006 /* LaunchScreen.storyboard */,
@@ -140,7 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AB20D932BC2A61B00EC0006 /* EditViewController.swift in Sources */,
+				1AB20D932BC2A61B00EC0006 /* SettingsViewController.swift in Sources */,
 				1AB20D832BC2A4CE00EC0006 /* MainViewController.swift in Sources */,
 				1AB20D952BC2A66D00EC0006 /* ProfileViewController.swift in Sources */,
 				1AB20D7F2BC2A4CE00EC0006 /* AppDelegate.swift in Sources */,
