@@ -58,16 +58,48 @@
 		1AB20D7D2BC2A4CE00EC0006 /* DelegationApp */ = {
 			isa = PBXGroup;
 			children = (
-				1AB20D7E2BC2A4CE00EC0006 /* AppDelegate.swift */,
-				1AB20D802BC2A4CE00EC0006 /* SceneDelegate.swift */,
+				1AC3A3052BC40B2700E79E6B /* Controllers */,
+				1AC3A3072BC40B5700E79E6B /* LaunchScreen */,
+				1AC3A3062BC40B3800E79E6B /* Resources */,
+				1AC3A3082BC40B6C00E79E6B /* App */,
+			);
+			path = DelegationApp;
+			sourceTree = "<group>";
+		};
+		1AC3A3052BC40B2700E79E6B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				1AB20D822BC2A4CE00EC0006 /* MainViewController.swift */,
 				1AB20D922BC2A61B00EC0006 /* SettingsViewController.swift */,
 				1AB20D942BC2A66D00EC0006 /* ProfileViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1AC3A3062BC40B3800E79E6B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				1AB20D872BC2A4CF00EC0006 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1AC3A3072BC40B5700E79E6B /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
 				1AB20D892BC2A4CF00EC0006 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		1AC3A3082BC40B6C00E79E6B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1AB20D7E2BC2A4CE00EC0006 /* AppDelegate.swift */,
+				1AB20D802BC2A4CE00EC0006 /* SceneDelegate.swift */,
 				1AB20D8C2BC2A4CF00EC0006 /* Info.plist */,
 			);
-			path = DelegationApp;
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,7 +322,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QZ329TNU43;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DelegationApp/Info.plist;
+				INFOPLIST_FILE = DelegationApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -321,7 +353,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QZ329TNU43;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DelegationApp/Info.plist;
+				INFOPLIST_FILE = DelegationApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
