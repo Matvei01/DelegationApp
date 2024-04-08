@@ -175,7 +175,7 @@ private extension MainViewController {
                       font: UIFont? = nil,
                       titleColor: UIColor? = nil,
                       radius: CGFloat? = nil,
-                      action: UIAction? = nil,
+                      action: UIAction,
                       image: UIImage? = nil,
                       tintColor: UIColor? = nil) -> UIButton {
         
